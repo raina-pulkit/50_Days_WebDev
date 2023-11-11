@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+    gap: 10px;
+}
+
+.panel{
+    display: flex;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 1;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h1{
+    margin: auto;
+    opacity: 0;    /*Make it disappear first */
+    color:wheat;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h1{
+    opacity: 1;
+}
+
+.one{
+    background: url("images/img1.jpg") center center;
+    background-size: cover;
+}
+
+.two{
+    background: url("images/img2.jpg") center center;
+    background-size: cover;
+}
+
+.three{
+    background: url("images/img3.jpg") center center;
+    background-size: cover;
+}
+
+.four{
+    background: url("images/img4.jpg") center center;
+    background-size: cover;
+}
+
+.five{
+    background: url("images/img5.jpg") center center;
+    background-size: cover;
+}
+
+@media only screen and (max-width:850px){
+    .panel:not(.active){
+        flex: 0.5;
+    }
+}
+
+@media only screen and (max-width: 910px){
+    .container{
+        width: 100vw;
+        gap: 2px;
+    }
+
+    .panel h1{
+        font-size: 1.5rem;
+    }
+
+    /* .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    } */
+}
