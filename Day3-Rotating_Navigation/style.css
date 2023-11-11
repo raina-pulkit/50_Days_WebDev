@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+}
+
+p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 30px 0;
+
+    line-height: 1.5rem;
+}
+
+body{
+    /* Hides overflow along x axis */
+    overflow-x: hidden;
+    background-color: rgb(29, 37, 16);
+    color: #222;
+}
+
+.container{
+    background-color: antiquewhite;
+    transform-origin: top left;
+    transition: 0.5s ease;
+    min-height: 100vh;
+    padding: 2rem 8rem;
+}
+
+.container.show-nav{
+    transform: rotate(-15deg);
+}
+
+small{
+    text-align: left;
+    font-style: italic;
+}
+
+.circle-container{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+
+    transition: 0.7s ease;
+}
+
+.circle{
+    background-color:#5CF78A;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
+    position: relative;
+
+    transition: 0.5s ease;
+}
+
+.circle button{
+    position: absolute;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+button#close{
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+button#close:active{
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+button#nav-bar{
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+button#nav-bar:active{
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+img{
+    max-width: 100%;
+    margin: auto;
+
+    display: flex;
+}
+
+nav{
+    position: fixed;
+    bottom: 1rem;
+    left: 0px;
+    z-index: 4;
+
+    transform: translateX(-100%);
+    transition: 0.7s ease;
+}
+
+nav ul{
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 0;
+    color: white;
+}
+
+nav ul li{
+    margin: 20px 15px;
+}
+
+nav ul li + li{
+    margin-left: 30px;
+}
+
+nav ul li + li + li{
+    margin-left: 45px;
+}
+
+.container.show-nav + nav{
+    transform: translate(0);
+}
+
+
+/* This doesnt work because '+' is only for next sibling */
+/* .container.show-nav + .circle-container{
+    transform: translate(-50%, -50%) rotate(-90deg);
+} */
+
