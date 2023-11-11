@@ -1,0 +1,44 @@
+:root{
+    --url-add: url("https://imgs.search.brave.com/l0BbKWmJvnan8hBF_wHyivoeyf3lekKKw6ZJtAvONaQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC8wUFhOUnRT/LmpwZw");
+    /* We cannot use var() inside url, so we create url() itself as a variable */
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    display: flex;
+
+}
+
+.image{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: var(--url-add) no-repeat center center/cover;
+    filter: blur(0px);
+    /* animation: anim 3s linear; */
+}
+
+@keyframes anim {
+    0%{
+        filter: blur(70px);
+    }
+
+    100%{
+        filter: blue(0px);
+    }
+}
+
+.percent{
+    font-size: 4rem;
+    font-weight: 800;
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

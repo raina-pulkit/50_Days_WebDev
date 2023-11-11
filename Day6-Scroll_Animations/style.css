@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: bisque;
+}
+
+h1{
+    text-align: center;
+}
+
+.box{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    background-color: blue;
+    border-radius: 10px;
+    width: 25%;
+    height: fit-content;
+    padding: 1.5rem;
+    color: white;
+
+    transition: 0.4s ease-in;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(300%);
+}
+
+.box:nth-of-type(odd){
+    transform: translateX(-300%);    
+}
+
+.box.active{
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 1000px){
+    .box{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .box{
+        width: 50%;
+    }
+}
