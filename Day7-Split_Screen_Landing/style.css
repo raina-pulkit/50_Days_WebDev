@@ -2,14 +2,118 @@
     margin: 0;
     font-family: 'Playfair Display', serif;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
     gap: 20px;
     background-color: bisque;
+}
+
+.container{
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    background-color: darkgrey;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+    transition: width 0.8s ease-in-out;
+}
+
+.split.left{
+    left: 0;
+    background: url("https://imgs.search.brave.com/Rz4njWgJ2j_tHM5_FLvz3tdhIJ8s7-CAX6odtgkEOnE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8x/Mi8xMC8yMS8yNi9m/b29kLTE4OTgxOTRf/NjQwLmpwZw") no-repeat top center/cover;
+    /* opacity: 50%; */
+}
+
+.split.right{
+    right: 0;   /*Or left: 50%; but if we do that when we transform, then we have to change the position as well*/
+    background: url("https://imgs.search.brave.com/WoFF-uH7FcLqWYWXPpUOvY64YZKFqN70e1ekLP4P36U/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzLzg2MS9mb29k/LTE1NzA2MjAuanBn/P2ZtdD13ZWJwJnc9/MzUw") no-repeat center top/cover;
+    /* opacity: 50%; */
+}
+
+/*To get the effect of an overlay we can either add a background image with the background color with alpha values and opacity*/
+/*Or make a pseudo element before the panel and make it with a background color and opacity*/
+
+.split.left::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 132, 46, 0.5);
+}
+
+.split.right::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(195, 29, 29, 0.5);
+}
+
+h1{
+    font-size: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    white-space: nowrap;   /*You to prevent the text from wrapping even if there's no space*/
+}
+
+.btn{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    color: white;
+    text-decoration: none;
+    border: solid;
+    border-color: rgb(13, 31, 31);
+    border-radius: 20px;
+    /* width: 10rem;
+    height: 3rem; */
+    padding: 1.25rem 2.5rem;
+    font-weight: bolder;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.split .btn:hover{
+    background-color: rgb(166, 200, 44);
+    border-color: white;
+    transform: translate(-50%, -60%) scale(0.9);
+}
+
+.hover-left .left{
+    width: 75%;
+}
+
+.hover-left .right{
+    width: 25%;
+}
+
+.hover-right .left{
+    width: 25%;
+}
+
+.hover-right .right{
+    width: 75%;
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 2rem;
+    }
+    .btn{
+        transform: translate(-50%, -60%) scale(0.75);
+    }
+    
 }
