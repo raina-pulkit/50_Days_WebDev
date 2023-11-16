@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@600&display=swap');
+
+:root{
+    --primary: rgb(33, 0, 109);
+    --secondary: rgb(125, 125, 183);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--primary);
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+header{
+    width: 100%;
+    padding: 1rem 8rem;
+}
+
+form{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+}
+
+button{
+    background: transparent;
+    outline: none;
+    border: none    ;
+}
+
+.search{
+    border: 3px solid var(--secondary);
+    outline: none;
+    padding: 0.5rem 0.7rem;
+    width: 15%;
+    border-radius: 20px;
+    color:bisque;
+    background-color: transparent;
+}
+
+.search::placeholder{
+    color: bisque;
+}
+
+.search:focus{
+    border-color: yellow;
+}
+
+.search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transform: scale(1.5);
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+
+    transition: 0.2s ease;
+}
+
+.search-btn:hover{
+    transform: scale(1.2);
+    color: white;
+    border-color: white;
+}
+
+.search:active{
+    transform: scale(0.8);
+}
+
+.container{
+    margin: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.movie{
+    /* padding: 0.5rem 1rem; */
+
+    width: 340px;
+    border: 3px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--secondary);
+
+    overflow: hidden;
+    position: relative;
+}
+
+.movie img{
+    width: 300px;
+    margin: 0.5rem 1rem 1rem 1rem;
+}
+
+.movie-info{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.movie-info h3{
+    text-decoration: underline;
+}
+
+.movie-info span{
+    padding: 0.25rem;
+    border-radius: 10px;
+}
+
+.movie-info span.red{
+    background-color: red;
+}
+
+.movie-info span.green{
+    background-color: green;
+}
+
+.movie-info span.orange{
+    background-color: orange;
+}
+
+.movie-review{
+    background-color: rgba(245, 245,245, 0.8);
+    padding: 0.5rem;
+    border: 2px double black;
+    border-radius: 10px;
+    transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    position: absolute;
+    top: 35%;
+    left: 0;
+    bottom: 0;
+
+    transform: translateY(100%);
+}
+.movie:hover{
+    box-shadow: 3px 3px black;
+}
+
+.movie:hover .movie-review{
+    transform: translateY(0);
+}
+
+.no-movies{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+    animation: slide-in 0.3s;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.no-movies h3{
+    font-size: 5rem;
+    color: white;
+
+    white-space: nowrap;
+}
+
+.no-movies h3.shadow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-49.55%, -48%);
+}

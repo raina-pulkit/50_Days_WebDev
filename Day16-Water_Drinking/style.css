@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color:rgb(89, 89, 240);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+h3{
+    margin-bottom: 2rem;
+}
+
+
+.cup{
+    background-color: white;
+    border: 4px solid rgb(20, 20, 222);
+    color: rgb(140, 140, 245);
+
+    border-radius: 0 0 3rem 3rem;
+    height:  20rem;
+    width: 8rem;
+
+    margin: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cups{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    justify-content: center;  
+}
+
+.cup.cup-small{
+    width: 3.5rem;
+    height: 10rem;
+    background-color: rgba(255,255,255,0.75);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1.5rem;
+
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.cup.full{
+    background-color: rgb(92, 223, 223);
+    color: white;
+}
+
+.remained{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#liters{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.remained small{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.percentage{
+    background-color: rgb(92, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 0;
+
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
