@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body{
+    font-family: 'Rajdhani';
+    padding: 0rem;
+    background-color: navy;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}

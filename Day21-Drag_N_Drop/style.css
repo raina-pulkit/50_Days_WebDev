@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body{
+    font-family: 'Rajdhani';
+    padding: 0rem;
+    background-color: navy;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box{
+    width: 150px;
+    /* flex-grow: 1;
+    flex-shrink: 1; */
+    height: 150px;
+    background-color: white;
+    border: 2px solid black;
+
+    transition: 0.2s ease-in-out;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    background: url("https://source.unsplash.com/random/150x150") center center / cover no-repeat;
+    cursor: pointer;
+}
+
+.hold {
+    border: 4px dotted white;
+}
+
+.hovered{
+    width: 150px;
+    background-color: darkslategrey;
+    border: 2px dashed white;
+}
+
+
+@media only screen and (max-width:800px){
+    .container{
+        flex-direction: column;
+    }
+}

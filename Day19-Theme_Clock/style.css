@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Rajdhani';
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 3rem;
+
+    backdrop-filter: blur(5px);
+    transition: 0.4s ease;
+}
+
+body.dark{
+    background-color: black;
+}
+
+.dark-mode{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+
+    transform: translate(-50%, -20%);
+    background-color: black;
+    color: whitesmoke;
+    
+    border: 2px double wheat;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+
+    transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.dark-mode.dark{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.dark-mode.dark:hover{
+    transform: translate(-50%, -20%) scale(0.85);
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.dark-mode:hover{
+    transform: translate(-50%, -20%) scale(0.85);
+    background-color: transparent;
+    border-color: black;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    margin-top: 8%;
+}
+
+.clock{
+    position: relative;
+    width: 10%;
+    padding: 10%;
+    background-color: whitesmoke;
+    margin-top: 100px;
+
+    border-radius: 50%;
+    border: 8px double black;
+}
+
+.time{
+    font-size: 4.5rem;
+}
+
+.center-clock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.needle{
+    background-color: black;
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    top: 50%;
+    left: 50%;
+    transform-origin: top center;
+
+    border-radius: 10px;
+}
+
+.needle.hour{
+    height: 80px;
+    background-color: red;
+    transform: translate(-50%, 0) rotate(180deg);
+}
+
+.needle.min{
+    height: 120px;
+    transform: translate(-50%, 0) rotate(180deg);
+}
+
+.needle.sec{
+    background-color: rgb(112, 106, 106);
+    transform: translate(-50%, 0) rotate(180deg);
+}
+
+.date{
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color: whitesmoke;
+
+    text-align: center;
+}
+
+.day, .month{
+    color: gray;
+}
+
+.clock.dark{
+    background-color: black;
+    border: 8px double white;
+}
+
+.needle.hour.dark{
+    background-color: red;
+}
+
+.needle.min.dark{
+    background-color: rgb(203, 249, 184);
+}
+
+.needle.sec.dark{
+    background-color: cadetblue;
+}
+
+.center-clock.dark{
+    background-color: whitesmoke;
+}
+
+.time.dark{
+    color: whitesmoke;
+}
+
+.date.dark{
+    background-color: whitesmoke;
+    color: black;
+}
