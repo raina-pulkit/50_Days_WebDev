@@ -3,17 +3,69 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Rajdhani', sans-serif;
 }
 
 body{
-    font-family: 'Rajdhani';
-    padding: 0rem;
-    background-color: navy;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 3rem;
+    background-color: rgb(142, 135, 135);
     width: 100%;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+canvas{
+    background-color: red;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+
+.tools{
+    background-color: slateblue;
+    border: 8px double rgb(214, 213, 219);
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+
+    align-items: center;
+}
+
+.tools > *{
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tools button{
+    cursor: pointer;
+}
+
+.size{
+    width: 7%;
+}
+
+.tools> *:last-child{
+    margin-left: auto;
+}
+
+button:disabled{
+    cursor: not-allowed;
+}
+
+input:hover{
+    cursor: pointer;
 }

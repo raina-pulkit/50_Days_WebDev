@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@600&display=swap');
 
+:root{
+    --triangle-color: white;
+    --time-period: 2s;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,11 +13,69 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: navy;
+    background-color: steelblue;
     width: 100%;
+    height: 100vh;
 
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    width: 60%;
+    height: 50%;
+
+    position: relative;
+}
+
+.triangle-one, .triangle-two{
+    position: absolute;
+    /* transform-origin: top left; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: 50px;
+    width: 50px;
+
+    border: 50px solid transparent;
+    border-bottom: 50px solid var(--triangle-color);
+}
+
+.triangle-two{
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation: tri-two var(--time-period) cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+
+.triangle-one{
+    animation: tri-one var(--time-period) cubic-bezier(0.39, 0.575, 0.565, 1) infinite calc(var(--time-period)/4);
+}
+
+@keyframes tri-one {
+    0%, 25%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50%, 75%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes tri-two {
+    0%, 25%{
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    50%, 75%{
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(450deg);
+    }
 }
