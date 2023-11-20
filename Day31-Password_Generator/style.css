@@ -9,11 +9,12 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: navy;
+    background-color: darksalmon;
     width: 100%;
+    height: 100vh;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }

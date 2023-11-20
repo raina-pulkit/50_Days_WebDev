@@ -9,11 +9,136 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: navy;
+    background-color: whitesmoke;
     width: 100%;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1509281373149-e957c6296406?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center center / cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+.first-block h1{
+    font-size: 5rem;
+}
+
+.first-block p{
+    font-size: 1.5rem;
+}
+
+.first-block{
+    margin-bottom: 150px;
+    z-index: 1;
+    color: white;
+}
+
+.content::before{
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content-main{
+    font-size: 150%;
+}
+
+.content-main h3,
+.content-main p{
+    margin: 30px 10px;
+    letter-spacing: 1.2px;
+    line-height: 2.5rem;
+}
+
+.content-main p{
+    color: rgb(38, 28, 102);
+}
+
+/* NAV BAR DESIGNING */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(39, 41, 34);
+    right: 0;
+    padding: 20px;
+    transition: 0.3s ease;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,1);
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    padding-right: 1rem;
+}
+
+.container h1{
+    background: url("https://plus.unsplash.com/premium_photo-1682216872195-0bfacc36b02c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center center / cover no-repeat;
+    align-items: center;
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.container h1 a{
+    color: black;
+    text-decoration: none;
+}
+
+.container ul{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 7rem;
+
+    font-size: 2rem;
+}
+
+.container ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav.active{
+    background-color: white;
+    padding: 0.25rem;
+
+    box-shadow: 0 2px 100px rgba(0,0,0,1);
+}
+
+.container ul li:hover{
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transform: scale(1.2);
+}
+
+nav.active .container ul li a{
+    color: black;
+}
+
+.container ul li:hover a{
+    color: orangered !important;
+}
+
+.container ul li a.active{
+    color: orangered !important;
+    text-decoration: none;
 }

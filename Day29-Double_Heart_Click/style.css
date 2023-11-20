@@ -9,11 +9,67 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: navy;
+    background-color: wheat;
     width: 100%;
+    height: 100vh;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h2{
+    font-size: 3rem;
+}
+
+.container p{
+    font-size: 2rem;
+}
+
+.image-liked{
+    width: 20%;
+    height: 100%;
+    background: url("https://imgs.search.brave.com/VeXS9M64WCZXlFeZQkbPwULvtkmrhgCAlnh26wRKTXE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c2NvdHNtYW4uY29t/L3dlYmltZy9iMjVs/WTIxek9qQXpNalF4/Tm1WaUxUQmxaalF0/TkRrNU9DMWhNamRq/TFRJd056Z3paV0pp/WkRBd056cGtaR0Uw/TTJReE5DMWtZMkk1/TFRRek4yVXRPVFJp/WkMwNE9XWXlNelE1/WXpFd1lXTT0uanBn/P2Nyb3A9MzoyLHNt/YXJ0JndpZHRoPTY0/MCZxdWFsaXR5PTY1") center center / cover no-repeat;
+
+    box-shadow: 0 0 10px black;
+    position: relative;
+    overflow: hidden;   
+}
+
+.image-liked .heart{
+    color: white;
+    display: none;
+    
+    /* This is to ensure that no mouse interaction occurs between the heart placed and the next double click */
+    pointer-events: none;   
+
+
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.image-liked .heart.active{
+    display: block;
+    position: absolute;
+    animation: grow 2s ease;
+}
+@keyframes grow {
+    0%{
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translate(-50%, -50%) scale(50);
+        opacity: 0;
+    }
 }

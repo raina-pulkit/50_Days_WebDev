@@ -9,11 +9,45 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: navy;
+    background-color: darksalmon;
     width: 100%;
+    height: 100vh;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }
+
+.speed{
+    position: absolute;
+    bottom: 40px;
+    z-index: 3;
+}
+
+.speed::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -15%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 50%;
+    text-align: center;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+
