@@ -9,7 +9,7 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: darksalmon;
+    background-color: slateblue;
     width: 100%;
     height: 100vh;
 
@@ -17,4 +17,103 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    width: 30%;
+    height: 60%;
+    background-color: rgb(24, 12, 102);
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.title h1{
+    font-size: 3rem;
+    color: white;
+}
+
+.input{
+    width: 100%;
+    position: relative;
+}
+
+#password{
+    width: 100%;
+    height: 40px;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: rgba(245, 245, 245, 0.25);
+    border-radius: 20px;
+}
+
+i{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 35px;
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+i:hover{
+    transform: translate(0, -50%) scale(0.85);
+}
+
+.specifics{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details{
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details.length input{
+    width: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.details input[type="checkbox"]{
+    transform: scale(1.5);
+}
+
+button{
+    color: white;
+    background: rgb(53, 41, 128);
+    padding: 1rem 3rem;
+    border: 2px solid white;
+
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 20px;
+
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.generate:hover{
+    transform: scale(0.9);
+}
+
+.generate:active{
+    transform: scale(0.85);
 }

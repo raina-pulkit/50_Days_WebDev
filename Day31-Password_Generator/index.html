@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Text Filler</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="title"><h1>Password Generator</h1></div>
+
+        <div class="input"><input type="text" id="password"><i class="fa-regular fa-paste"></i></input></div>
+        
+        <div class="specifics">
+            <div class="details length">
+                <label for="len">Password Length</label>
+                <input type="number" name="" id="number" value="8" max="32" min="1">
+            </div>
+            
+            <div class="details uppercase">
+                <label for="len">Include Uppercase?</label>
+                <input type="checkbox" name="uc" id="uc">
+            </div>
+            
+            <div class="details lowercase">
+                <label for="len">Include Lowercase?</label>
+                <input type="checkbox" name="lc" id="lc">
+            </div>
+            
+            <div class="details numbers">
+                <label for="len">Include Numbers</label>
+                <input type="checkbox" name="num" id="num">
+            </div>
+            
+            <div class="details symbols">
+                <label for="len">Include Symbols</label>
+                <input type="checkbox" name="sym" id="sym">
+            </div>    
+        </div>
+
+        <button class="generate">GENERATE PASSWORD</button>
+
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="index.js"></script>
