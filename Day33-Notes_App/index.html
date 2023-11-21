@@ -3,14 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Text Filler</title>
+    <title>Notes App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    
+    <div class="container">
+        <button class="add" id="add">
+            <i class="fas fa-plus"></i>Add Note
+        </button>
+
+        <div class="note">
+            <div class="tools">
+                <button class="edit"><i class="fas fa-edit"></i></button>
+                <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </div>
+
+            <div class="main hidden"></div>
+            <textarea class=""></textarea>
+        </div>
+
+        <div class="note">
+            <div class="tools">
+                <button class="edit"><i class="fas fa-edit"></i></button>
+                <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </div>
+
+            <div class="main hidden"></div>
+            <textarea class="hidden"></textarea>
+        </div>
+
+        <div class="note">
+            <div class="tools">
+                <button class="edit"><i class="fas fa-edit"></i></button>
+                <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </div>
+
+            <div class="main hidden"></div>
+            <textarea class=""></textarea>
+        </div>
+    </div>
+     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/10.0.0/marked.min.js" integrity="sha512-EjCqglelq9tO9KdT2iRYtcj19Q8sSXblMy+5SBfogeh5TvLwmRh9dz5l1uEwNO40/cZInZsr3jti2JCNMZJsng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
 </body>
 </html>

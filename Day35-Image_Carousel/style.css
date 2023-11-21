@@ -8,7 +8,6 @@
 
 body{
     font-family: 'Rajdhani';
-    padding: 0rem;
     background-color: darksalmon;
     width: 100%;
     height: 100vh;
@@ -17,4 +16,47 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+
+    transition: 0.6s ease-in-out;
+}
+
+.carousel{
+    width: 500px;
+    height: 541px;
+    overflow: hidden;
+
+    box-shadow: 0 0 15px black;
+}
+
+.image-container{
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    border: 2px solid white;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+
+    width: 50%;
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn:hover{
+    transform: scale(0.9);
+    opacity: 0.8;
 }

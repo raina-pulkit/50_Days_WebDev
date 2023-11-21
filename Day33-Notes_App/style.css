@@ -11,10 +11,96 @@ body{
     padding: 0rem;
     background-color: darksalmon;
     width: 100%;
-    height: 100vh;
+}
 
+.container{
+    width: 100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding: 3rem;
+
+    gap: 2rem;
+
+}
+
+.add{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+
+    background-color: rgb(5, 197, 5);
+    color: whitesmoke;
+    font-size: 1.05rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+
+    transition: 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.add:hover{
+    transform: scale(0.9);
+}
+
+.add:active{
+    transform: scale(0.85);
+}
+
+
+.note{
+    box-shadow: 0 0 5px black;
+    height: 400px;
+    width: 400px;
+
+    margin-bottom: 30px;
+}
+
+.note .tools{
+    background-color: rgba(5, 197, 5, 0.5);
+    border: 3px double black;
+    padding: 5px 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.note .tools button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: 0.1s ease-in-out;
+    color: rgb(11, 10, 10);
+}
+
+.note .tools button:hover{
+    transform: scale(0.85);
+}
+
+.tools + div{
+    height: 91%;
+    flex: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+textarea{
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+
+    padding: 1rem;
+}
+
+i{
+    pointer-events: none;
 }

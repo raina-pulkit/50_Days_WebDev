@@ -9,7 +9,7 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: darksalmon;
+    background-color: slateblue;
     width: 100%;
     height: 100vh;
 
@@ -17,4 +17,160 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+
+
+#replay{
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#replay:hover{
+    transform: scale(0.95);
+}
+
+#replay:active{
+    transform: scale(0.85);
+}
+
+.counter{
+    width: 10%;
+    height: 14%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    display: none;
+}
+
+.counter.hide{
+    transform: translate(-50%, -50%) scale(0);
+    animation: hider 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes hider {
+    0%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    10%{
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) scale(0);
+        display: none;
+    }
+}
+
+.final.show{
+    transform: translate(-50%, -50%) scale(1);
+    animation: shower 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes shower {
+    0%{
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    50%{
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) scale(1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.nums{
+    font-size: 3.5rem;
+    position: relative;
+    color: rgb(16, 17, 17);
+
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    
+    overflow: hidden;
+}
+
+.counter h3{
+    font-size: 2rem;
+}
+.nums span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform-origin: bottom center;
+    transform: translate(-50%, -50%) rotate(100deg);
+}
+
+.nums span.come-in{
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: come-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes come-in {
+    0%{
+        transform: translate(-50%, -50%) rotate(100deg);
+    }
+
+    80%{
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.nums span.go-out{
+    transform: translate(-50%, -50%) rotate(-100deg);
+    animation: go-out 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes go-out {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    20%{
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(-100deg);
+    }
 }

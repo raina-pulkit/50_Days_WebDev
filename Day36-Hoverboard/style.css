@@ -9,7 +9,7 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: darksalmon;
+    background-color: rgba(19, 18, 18, 0.8);
     width: 100%;
     height: 100vh;
 
@@ -17,4 +17,28 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+.square{
+    background-color: black;
+
+    width: 20px;
+    height: 20px;
+
+    box-shadow: 0 0 5px black;
+    margin: 2px;
+
+    transition: 5s ease;
+}
+
+.square:hover{
+    transition-duration: 0s;
+}
+
+.container{
+    width: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
