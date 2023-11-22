@@ -3,11 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Text Filler</title>
+    <title>User Searcher</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <header class="header">
+            <h3>Live User Filter</h3>
+            <small>Search by name and/or location</small>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+        </header>
+
+        <ul class="user-list">
+            <!-- <li class="user hidden">
+                <img src="https://randomuser.me/api/portraits/men/33.jpg">
+                <div class="user-info">
+                    <h4>Paul Henry</h4>
+                    <p>New Delhi, India</p>
+                </div>
+            </li>
+
+            <li class="user hidden">
+                <img src="https://randomuser.me/api/portraits/men/33.jpg">
+                <div class="user-info">
+                    <h4>Paul Henry</h4>
+                    <p>New Delhi, India</p>
+                </div>
+            </li>
+
+            <li class="user hidden">
+                <img src="https://randomuser.me/api/portraits/men/33.jpg">
+                <div class="user-info">
+                    <h4>Paul Henry</h4>
+                    <p>New Delhi, India</p>
+                </div>
+            </li> -->
+
+            <li class = 'loading hidden'>Loading...</li>
+        </ul>
+    </div>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
