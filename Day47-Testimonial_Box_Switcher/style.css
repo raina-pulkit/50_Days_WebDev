@@ -9,7 +9,7 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: darksalmon;
+    background-color: antiquewhite;
     width: 100%;
     height: 100vh;
 
@@ -18,3 +18,81 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.testimonial-container{
+    background-color: rgb(100, 100, 226);
+    max-width: 720px;
+    border: 4px double black;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: 1.25px;
+}
+
+.text{
+    color: white; 
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-info{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.user-info img{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px black;
+}
+
+.user-info .details h4{
+    font-size: 150%;
+}
+
+.user-info .details small{
+    font-style: italic;
+}
+
+.fas{
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+}
+
+.fa-quote-left{
+    top: 70px;
+    left: 20px;
+}
+
+.fa-quote-right{
+    top: 70px;
+    right: 20px;
+}
+
+.progress-bar{
+    margin-bottom: 30px;
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+
+    animation: progress 02s linear infinite;
+}
+
+@keyframes progress {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+

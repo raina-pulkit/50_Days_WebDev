@@ -9,12 +9,93 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: darksalmon;
+    background: rgb(53,60,61);
+    background: linear-gradient(58deg, rgba(53,60,61,1) 0%, rgba(11,186,166,0.49352240896358546) 57%);
     width: 100%;
     height: 100vh;
+    padding: 5rem;
 
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    width: 40rem;
+    height: 20rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.container .range-container{
+    position: relative;
+    background: inherit;
+    width: 100%;
+}
+
+#range{
+    width: 100%;
+
+
+    /* Margin is because the label if gonna go above this line */
+    margin: 18px 0;
+    -webkit-appearance: none;
+}
+
+#range + label{
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 0.75rem;
+    border-radius: 15px;
+    top: calc(-15px - 1.25rem);
+    left: 0;
+
+    transform: translate(-50%, 0);
+    box-shadow: 0 0 3px black;
+}
+
+
+/* Chrome, IE & Safari */
+#range::-webkit-slider-runnable-track{
+    background-color: purple;
+    box-shadow: 0 0 3px purple;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+}
+
+#range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px black;
+
+    transform: translateY(-25%);
+}
+
+/* Firefox */
+#range::-moz-range-track{
+    background-color: purple;
+    box-shadow: 0 0 3px purple;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+}
+
+#range::-moz-range-thumb{
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px black;
+
+    transform: translateY(-25%);
 }

@@ -9,7 +9,7 @@
 body{
     font-family: 'Rajdhani';
     padding: 0rem;
-    background-color: darksalmon;
+    background: linear-gradient(90deg, rgb(127, 127, 222), lightblue, rgb(127, 127, 222));
     width: 100%;
     height: 100vh;
 
@@ -17,4 +17,72 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+.quiz-container{
+    border: 5px double black;
+    border-radius: 20px;
+    width: 720px;
+    height: 362px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-question{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quiz-question h2{
+    text-align: center;
+    font-size: 175%;
+}
+
+.quiz-question ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quiz-question ul li{
+    font-size: 1.25rem;
+}
+
+#submit{
+    font-size: 130%;
+    width: 100%;
+    padding: 10px 12px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid black;
+    outline: none;
+
+    transition: 0.1s ease-in;
+}
+
+#submit:hover{
+    transform: scale(0.9);
+    background-color: white;
+    color: black;
+}
+
+#submit:active{
+    transform: scale(0.85);
+}
+
+ul li label{
+    cursor: pointer;
+}
+
+ul li input{
+    cursor: pointer;
 }

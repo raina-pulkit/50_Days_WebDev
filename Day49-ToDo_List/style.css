@@ -1,20 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:wght@600&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-    font-family: 'Rajdhani';
+    font-family: 'Poppins', sans-serif;
     padding: 0rem;
-    background-color: darksalmon;
+    background-color: antiquewhite;
     width: 100%;
     height: 100vh;
 
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+
+h1{
+    margin-bottom: 20px;
+    color: rgb(173, 171, 157);
+    font-size: 8rem;
+    opacity: 0.5;
+    text-align: center;
+    text-shadow: 3px 3px 5px black;
+}
+
+#form{
+    position: relative;
+}
+
+#submit{
+    position: absolute;
+    top: 3px;
+    right: -85px;
+    /* transform: translateX(50%); */
+
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#submit:hover{
+    background-color: rgb(43, 41, 41);
+    color: whitesmoke;
+    transform: scale(0.9);
+}
+
+#input{
+    border: none;
+    width: 750px;
+    height: 3rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    letter-spacing: 2.5px;
+    font-size: 20px;
+}
+
+.todo{
+    padding: 0;
+}
+
+.todo li{
+    list-style-type: none;
+    background-color: lightslategrey;
+    margin: 10px 0;
+    padding: 10px 5px 10px 25px;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px black;
+
+    font-size: 1.5rem;
+    transition: 0.2s ease-in;
+
+    animation: loading 0.2s ease;
+}
+
+@keyframes loading {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes going-out {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+.todo li:hover{
+    transform: scale(0.95);
+}
+
+.todo li.completed{
+    background-color: #b6b6b6;
+    color: #5d5c5c;
+    text-decoration: line-through;
+}
+
+small{
+    color: #696767;
+}
+small:first-of-type{
+    margin-top: 2.5rem;
 }

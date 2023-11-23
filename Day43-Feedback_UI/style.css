@@ -18,3 +18,157 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.panel-container{
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 2rem 5rem;
+    transform: translate(-50%, -50%);
+
+    width: 30rem;
+    height: 21rem;
+    border: 5px double black;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.panel-container h2{
+    text-align: center;
+}
+
+.panel-container .ratings-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.panel-container .ratings-container .rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px black;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.panel-container .ratings-container .rating:hover{
+    transform: scale(0.9);
+    background-color: rgba(0,0,0,0.5);
+}
+
+.panel-container .ratings-container .rating.active{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.panel-container .ratings-container .rating>*{
+    pointer-events: none;
+}
+
+button.submit{
+    background-color: black;
+    color: white;
+
+    font-size: 1.25rem;
+    padding: 0.25rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid black;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button.submit:hover{
+    background-color: whitesmoke;
+    color: black;
+    transform: scale(0.9);
+}
+
+button.submit:active{
+    transform: scale(0.85);
+}
+
+
+.thank-you{
+    background-color: antiquewhite;
+    box-shadow: 3px 3px 10px black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    border: 3px double black;
+    border-radius: 15px;
+    padding: 2.5rem;
+    transform: translate(-50%, -50%) scale(0);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    
+}
+
+.thank-you i{
+    color: red;
+    font-size: 2rem;
+}
+
+.thank-you h2{
+    font-size: 2rem;
+}
+
+.hide{
+    transform: translate(-50%, -50%)  scale(0);
+    animation: hide 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+@keyframes hide {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    25%{
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+.show{
+    transform: translate(-50%, -50%) scale(1);
+    animation: show 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+@keyframes show {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    75%{
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
